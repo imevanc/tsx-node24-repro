@@ -1,0 +1,32 @@
+name: Reproduce tsx Node 24 Bug
+
+on: [push, pull_request]
+
+jobs:
+  node-24-fails:
+    name: Node 24 (fails)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - run: node --version
+      - run: npm install
+      - run: npm test
+
+  node-22-passes:
+    name: Node 22 (passes)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: node --version
+      - run: npm install
+      - run: npm test
