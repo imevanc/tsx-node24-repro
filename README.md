@@ -1,6 +1,6 @@
 # tsx + Node 24 Bug Reproduction
 
-Minimal reproduction for a `tsx` bug where it incorrectly resolves `.js` files inside `node_modules` to `.jsx` extensions on Node 24.
+Minimal reproduction for a `tsx` bug where it incorrectly resolves `.js` files inside `node_modules` to `.jsx` extensions on Node 24.x
 
 ## Bug
 
